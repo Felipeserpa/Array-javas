@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Exercício 04</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+// Declarar uma função passando dois parâmetros, onde o primeiro argumento é um array com nome de 5 pessoas e o outro argumento contém apenas o nome de uma pessoa. O retorno da função deverá exibir via console se o nome da variável consta entre os elementos do array ou não.
+
+var pessoas = ['Du','Dudu','Edu','Eduardo','Kadu'];
+
+var pessoa = 'Dudu';
+
+
+function verifica(pessoas,pessoa){
+
+	var marcador;
+
+	for(var x=0; x < pessoas.length; x++){
+
+		if(pessoas[x] == pessoa){
+
+			marcador = 'x';
+		}
+	}
+
+	return marcador;
+
+}
+
+var marcador = verifica(pessoas,pessoa);
+
+if(marcador=='x'){
+
+	console.log("Nome igual");
+}else{
+	console.log("Nenhuma nome igual");
+}
+
+
+
+</script>
+
+</body>
+</html>

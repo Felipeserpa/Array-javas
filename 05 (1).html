@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Exercício 05</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+// Declarar uma função passando dois parâmetros, tendo como primeiro argumento um array de objeto com nome e idade de 5 pessoas e o segundo argumento um array com nome de 7 pessoas. No escopo da função deverá ser verificado se contém nomes iguais entre ambos arrays. Caso seja encontrado, deverá ser chamado uma outra função tendo como parâmetro esse array de nomes iguais e exibir seus elementos via console.
+
+/*Array de Objeto com 3 elementos*/
+let pessoas_obj = [
+{nome:'Du',idade:10},
+{nome:'Dudu',idade:20},
+{nome:'Edu',idade:30},
+{nome:'Felipe',idade:40},
+{nome:'Kadu',idade:50},
+];
+
+let pessoas_array = ["Du","Teste","Edu","Felipe","PHP","JS","HTML"];
+
+var pessoas_iguais = [];
+
+function verifica(pessoas_obj, pessoas_array){
+
+	for(var x=0; x<pessoas_obj.length; x++){
+
+		for(var y=0; y<pessoas_array.length; y++){
+
+			if(pessoas_obj[x].nome == pessoas_array[x]){
+
+				pessoas_iguais.push(pessoas_obj[x].nome);
+			}
+		}
+	}
+
+	if(pessoas_iguais.length>0){
+
+		exibe_array(pessoas_iguais);
+	}
+}
+
+function exibe_array(pessoas_iguais){
+
+	for(var x=0; x<pessoas_iguais.length; x++){
+
+		console.log(pessoas_iguais[x]);
+	}
+}
+
+verifica(pessoas_obj, pessoas_array);
+
+</script>
+
+</body>
+</html>
